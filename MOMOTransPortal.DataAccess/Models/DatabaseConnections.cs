@@ -1,15 +1,18 @@
-﻿namespace DataAccess.Models
-{
-    public class DatabaseConnections
-    {
-        public Connection Default { get; set; }
-        public Connection SMS { get; set; }
-        public Connection CaaS { get; set; }
-    }
+﻿using System.Collections.Generic;
 
+namespace DataAccess.Models
+{
     public class Connection
     {
+        public string Name { get; set; }
         public string Schema { get; set; }
         public string ConnectionString { get; set; }
+        public List<Extra> Extra { get; set; }
+    }
+
+    public class Extra
+    {
+        public string Key { get; set; }
+        public string Value { get; set; }
     }
 }
