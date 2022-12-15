@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Data.Models
 {
-    internal class Product
+    public class Product
     {
         [Required]
         public int Id { get; set; }
